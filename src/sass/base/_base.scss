@@ -1,0 +1,60 @@
+////
+/// Base styles
+/// @group Base
+/// @author Rafael Goulart (faelplg)
+////
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  // This defines what 1rem is.
+  /* font-size: 10px; 1 rem is equal to 10px. */
+  font-size: 62.5%; // 10px divided by 16px (root default font-size)
+
+  // Not needed.
+  // @include respond(phone) {
+  //   font-size: 50%;
+  // }
+  @include respond(tab-land) {  // width < 1200?
+    font-size: 56.25%;  // 1rem = 9px, 9/16 = 56.25
+  }
+  @include respond(tab-port) {  // width < 900?
+    font-size: 50%;     // 1rem = 8px, 8/16 = 50
+  }
+  @include respond(big-desktop) {
+    font-size: 75%;     // 1 rem = 12, 12/16 = 75
+  }
+}
+
+body {
+  background-color: $background-color;
+  box-sizing: border-box;
+
+  @include respond(phone) {
+    padding: 0;
+  }
+}
+
+body {
+  box-sizing: border-box;
+  background-color: $background-color;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
