@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400;600&family=Fira+Code:wght@400;600&family=Roboto:wght@400;500&display=swap');
+
+// font-family: 'Roboto', sans-serif;
+// font-family: 'Baloo Tamma 2', cursive;
+// font-family: 'Fira Code', monospace;
+
+body {
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 2.5rem;
+}
+
+code {
+  font-family: 'Fira Code', monospace;
+  font-weight: 400;
+  background-color: #F5F5F6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Baloo Tamma 2', cursive;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 4.4rem;
+}
+
+p {
+  &:not(:last-child) {
+    margin-bottom: 1.6rem;
+  }
+}
