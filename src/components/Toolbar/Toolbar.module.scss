@@ -1,0 +1,23 @@
+@import '../../sass/abstracts/mixins';
+
+.Toolbar {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3.2rem;
+  height: 6.4rem;
+}
+
+.Menu {
+  display: none;
+  @include respond(phone) {
+    display: initial;
+  }
+}
+
+.Navigation {
+  @include respond(phone) {
+    display: none;
+  }
+}
