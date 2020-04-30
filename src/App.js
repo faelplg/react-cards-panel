@@ -16,6 +16,17 @@ class App extends Component {
       <Layout>
         <main className={classes.App}>
           <h1>Cards panel</h1>
+          <div className={classes.Panel}>
+            <div className={classes.Card}>
+              <h2>Título</h2>
+            </div>
+            <div className={classes.Card}>
+              <h2>Título</h2>
+            </div>
+            <div className={classes.Card}>
+              <h2>Título</h2>
+            </div>
+          </div>
         </main>
       </Layout>
     );
