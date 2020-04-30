@@ -1,12 +1,24 @@
 @import '../../sass/abstracts/mixins';
+@import '../../sass/abstracts/variables';
 
 .Toolbar {
   display: flex;
   flex-flow: row;
   align-items: center;
   justify-content: space-between;
-  padding: 3.2rem;
+  padding: 0 3.2rem;
+  background-color: $color-white;
+  box-shadow: $box-shadow;
+  z-index: 10;
+}
+
+.Default {
+  position: relative;
+  width: 100%;
   height: 6.4rem;
+  @include respond(phone) {
+    height: 5.6rem;
+  }
 }
 
 .Menu {
