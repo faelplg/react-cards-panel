@@ -16,7 +16,7 @@ p,
   font-weight: normal;
   font-size: 1.4rem;
   line-height: 2.5rem;
-  letter-spacing: 0.032rem;
+  letter-spacing: 0;
 }
 
 caption,
@@ -77,6 +77,7 @@ button,
   font-size: 1.4rem;
   line-height: 3.2rem;
   text-transform: uppercase;
+  letter-spacing: 0.032rem;
 }
 
 .text--headline,
@@ -92,6 +93,7 @@ button,
   font-weight: bold;
   font-size: 2.4rem;
   line-height: 4.4rem;
+  letter-spacing: 0.032rem;
 }
 
 .text--display-1 {
