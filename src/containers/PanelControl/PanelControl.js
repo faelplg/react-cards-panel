@@ -1,4 +1,5 @@
 import React, {PureComponent} from 'react';
+import Panel from '../../components/Panel/Panel';
 
 import classes from './PanelControl.module.scss';
 
@@ -45,23 +46,25 @@ class PanelControl extends PureComponent {
     // console.log('currentCards', currentCards);
     console.log('this.state.cards', this.state.cards);
     return (
-      <div className={classes.PanelControl}>
-        <div className={[classes.Filter, this.state.filterOpen ? classes.Open : null].join(' ')}>
-          <button onClick={this.openFilterHandler}>Filtrar</button>
-          <h3>Filter A</h3>
-          <h3>Filter B</h3>
-          <h3>Filter C</h3>
-          <h3>Filter D</h3>
+      <React.Fragment>
+        <button onClick={this.openFilterHandler}>Filtrar</button>
+        <div className={classes.PanelControl}>
+          <div className={[classes.Filter, this.state.filterOpen ? classes.Open : null].join(' ')}>
+            <h3>Filter A</h3>
+            <h3>Filter B</h3>
+            <h3>Filter C</h3>
+            <h3>Filter D</h3>
+          </div>
+          <Panel shrink={this.state.panelShrink}>
+            {this.state.cards.map((card) => (
+              <div key={card.id} className={classes.Card}>
+                <h2>{card.name}</h2>
+                <h2>{card.contact}</h2>
+              </div>
+            ))}
+          </Panel>
         </div>
-        <div className={[classes.Panel, this.state.panelShrink ? classes.Shrink : null].join(' ')}>
-          {this.state.cards.map((card) => (
-            <div key={card.id} className={classes.Card}>
-              <h2>{card.name}</h2>
-              <h2>{card.contact}</h2>
-            </div>
-          ))}
-        </div>
-      </div>
+      </React.Fragment>
     );
   }
 }
