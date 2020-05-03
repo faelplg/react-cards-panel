@@ -7,7 +7,9 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 3.2rem;
-  background-color: $color-white;
+  background-color: $color-primary;
+  color: $color-white;
+  fill: $color-white;
   box-shadow: $box-shadow;
   z-index: 10;
 }
@@ -26,6 +28,10 @@
   @include respond(phone) {
     display: initial;
   }
+}
+
+.Logo {
+  height: 3.2rem;
 }
 
 .Navigation {

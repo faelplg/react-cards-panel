@@ -1,0 +1,15 @@
+import React from 'react';
+import classes from './Button.module.scss';
+
+const Button = (props) => {
+  return (
+    <button
+      className={[classes.Button, props.isActive ? classes.Active : null].join(' ')}
+      onClick={props.whenClicked}
+    >
+      {props.children}
+    </button>
+  );
+};
+
+export default Button;

@@ -1,5 +1,6 @@
 import React from 'react';
 import classes from './Toolbar.module.scss';
+import logo from '../../assets/logo-white-horizontal.png';
 
 const Toolbar = (props) => {
   let layout_type_class;
@@ -11,7 +12,7 @@ const Toolbar = (props) => {
   return (
     <header className={[classes.Toolbar, layout_type_class].join(' ')}>
       <span className={[classes.Menu, 'text--button'].join(' ')}>Menu</span>
-      <span className="text--button">Logo</span>
+      <img className={classes.Logo} src={logo} alt='Logomarca fael.tech.'/>
       <span className={[classes.Navigation, 'text--button'].join(' ')}>Links</span>
     </header>
   );

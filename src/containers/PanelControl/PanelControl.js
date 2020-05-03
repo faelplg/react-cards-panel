@@ -1,5 +1,8 @@
 import React, {PureComponent} from 'react';
 import Panel from '../../components/Panel/Panel';
+import Filter from '../../components/Filter/Filter';
+import Card from '../../components/Card/Card';
+import Button from '../../components/Button/Button';
 
 import classes from './PanelControl.module.scss';
 
@@ -12,12 +15,6 @@ class PanelControl extends PureComponent {
       panelShrink: false,
     };
   }
-
-  openFilterHandler = () => {
-    this.setState((prevState) => {
-      return {filterOpen: !prevState.filterOpen, panelShrink: !prevState.panelShrink};
-    });
-  };
 
   componentDidMount() {
     console.log('DEBUG: on [PanelControl].componentDidMount - this.state', this.state);
@@ -34,33 +31,33 @@ class PanelControl extends PureComponent {
   }
 
   componentWillUnmount() {
-    console.log('DEBUG: on [PanelControl].componentWillUnmount - this.state', this.state);
+    console.log('DEBUG: on [PanelControl].componentWillUnmount() - this.state', this.state);
   }
 
   componentDidUpdate() {
-    console.log('DEBUG: on [PanelControl].componentDidUpdate - this.state', this.state);
+    console.log('DEBUG: on [PanelControl].componentDidUpdate() - this.state', this.state);
   }
 
+  openFilterHandler = () => {
+    this.setState((prevState) => {
+      return {filterOpen: !prevState.filterOpen, panelShrink: !prevState.panelShrink};
+    });
+  };
+
+  runFilterHandler = (params) => {
+    console.log('DEBUG: on [PanelControl].runFilter() - params', params);
+  };
+
   render() {
-    // const currentCards = [...this.state.cards];
-    // console.log('currentCards', currentCards);
-    console.log('this.state.cards', this.state.cards);
     return (
       <React.Fragment>
-        <button onClick={this.openFilterHandler}>Filtrar</button>
+        <h1>Cards panel</h1>
+        <Button whenClicked={this.openFilterHandler} isActive={this.state.filterOpen}>Filter</Button>
         <div className={classes.PanelControl}>
-          <div className={[classes.Filter, this.state.filterOpen ? classes.Open : null].join(' ')}>
-            <h3>Filter A</h3>
-            <h3>Filter B</h3>
-            <h3>Filter C</h3>
-            <h3>Filter D</h3>
-          </div>
+          <Filter open={this.state.filterOpen} runFilter={this.runFilterHandler} />
           <Panel shrink={this.state.panelShrink}>
             {this.state.cards.map((card) => (
-              <div key={card.id} className={classes.Card}>
-                <h2>{card.name}</h2>
-                <h2>{card.contact}</h2>
-              </div>
+              <Card key={card.id} name={card.name} contact={card.contact} />
             ))}
           </Panel>
         </div>

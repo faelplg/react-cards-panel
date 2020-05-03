@@ -14,7 +14,7 @@ class Layout extends Component {
 
   componentDidMount() {
     console.log(
-      'DEBUG: on [Layout].componentDidMount - this.state, this.props',
+      'DEBUG: on [Layout].componentDidMount() - this.state, this.props',
       this.state,
       this.props,
     );
@@ -22,7 +22,15 @@ class Layout extends Component {
 
   componentWillUnmount() {
     console.log(
-      'DEBUG: on [Layout].componentWillUnmount - this.state, this.props',
+      'DEBUG: on [Layout].componentWillUnmount() - this.state, this.props',
+      this.state,
+      this.props,
+    );
+  }
+
+  componentDidUpdate() {
+    console.log(
+      'DEBUG: on [Layout].componentDidUpdate() - this.state, this.props',
       this.state,
       this.props,
     );
@@ -33,7 +41,6 @@ class Layout extends Component {
       <React.Fragment>
         <Toolbar layoutType="Default" />
         <main className={[classes.Layout, classes.Default].join(' ')}>
-          <h1>Cards panel</h1>
           <PanelControl />
         </main>
       </React.Fragment>
