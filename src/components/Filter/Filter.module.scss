@@ -2,8 +2,11 @@
 @import '../../sass/abstracts/variables';
 
 .Filter {
-  padding: 0.8rem;
   flex: 0 1 auto;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding: 0.8rem;
 
   @include respond(phone) {
     position: absolute;
@@ -19,6 +22,7 @@
 
 .Filter.Open {
   min-width: 24rem;
+  align-items: flex-start;
   @include respond(phone) {
     margin-left: 0;
   }

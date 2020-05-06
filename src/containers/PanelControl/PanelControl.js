@@ -5,6 +5,8 @@ import Card from '../../components/Card/Card';
 import Button from '../../components/Button/Button';
 
 import classes from './PanelControl.module.scss';
+import {IconContext} from 'react-icons';
+import {FaFilter} from 'react-icons/fa';
 
 class PanelControl extends PureComponent {
   constructor(props) {
@@ -51,8 +53,17 @@ class PanelControl extends PureComponent {
   render() {
     return (
       <React.Fragment>
-        <h1>Cards panel</h1>
-        <Button whenClicked={this.openFilterHandler} isActive={this.state.filterOpen}>Filter</Button>
+        <div className="Header">
+          <h1>Cards Panel</h1>
+        </div>
+        <div className={classes.Toolbar}>
+          <Button whenClicked={this.openFilterHandler} isActive={this.state.filterOpen}>
+            <IconContext.Provider value={{style: {verticalAlign: 'middle', marginRight: '0.8rem'}}}>
+              <FaFilter />
+            </IconContext.Provider>
+            <span>Filter</span>
+          </Button>
+        </div>
         <div className={classes.PanelControl}>
           <Filter open={this.state.filterOpen} runFilter={this.runFilterHandler} />
           <Panel shrink={this.state.panelShrink}>

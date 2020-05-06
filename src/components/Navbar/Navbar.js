@@ -1,8 +1,8 @@
 import React from 'react';
-import classes from './Toolbar.module.scss';
+import classes from './Navbar.module.scss';
 import logo from '../../assets/logo-white-horizontal.png';
 
-const Toolbar = (props) => {
+const Navbar = (props) => {
   let layout_type_class;
   switch (props.layoutType) {
     default:
@@ -10,7 +10,7 @@ const Toolbar = (props) => {
       break;
   }
   return (
-    <header className={[classes.Toolbar, layout_type_class].join(' ')}>
+    <header className={[classes.Navbar, layout_type_class].join(' ')}>
       <span className={[classes.Menu, 'text--button'].join(' ')}>Menu</span>
       <img className={classes.Logo} src={logo} alt='Logomarca fael.tech.'/>
       <span className={[classes.Navigation, 'text--button'].join(' ')}>Links</span>
@@ -18,4 +18,4 @@ const Toolbar = (props) => {
   );
 };
 
-export default Toolbar;
+export default Navbar;

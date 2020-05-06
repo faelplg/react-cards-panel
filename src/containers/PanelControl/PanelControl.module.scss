@@ -1,4 +1,11 @@
+@import '../../sass/abstracts/variables';
+
 .PanelControl {
   display: flex;
   flex-flow: row nowrap;
+}
+
+.Toolbar {
+  padding: 1.6rem 0.8rem;
+  border-bottom: 1px solid $font-color;
 }
