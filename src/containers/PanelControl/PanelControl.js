@@ -53,7 +53,7 @@ class PanelControl extends PureComponent {
   render() {
     return (
       <React.Fragment>
-        <div className="Header">
+        <div className={classes.Header}>
           <h1>Cards Panel</h1>
         </div>
         <div className={classes.Toolbar}>

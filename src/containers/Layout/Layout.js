@@ -6,15 +6,15 @@ import classes from './Layout.module.scss';
 
 class Layout extends Component {
   componentDidMount() {
-    console.log('DEBUG: on [Layout].componentDidMount() - this.state, this.props', this.props);
+    console.log('DEBUG: on [Layout].componentDidMount() - this.props', this.props);
   }
 
   componentWillUnmount() {
-    console.log('DEBUG: on [Layout].componentWillUnmount() - this.state, this.props', this.props);
+    console.log('DEBUG: on [Layout].componentWillUnmount() - this.props', this.props);
   }
 
   componentDidUpdate() {
-    console.log('DEBUG: on [Layout].componentDidUpdate() - this.state, this.props', this.props);
+    console.log('DEBUG: on [Layout].componentDidUpdate() - this.props', this.props);
   }
 
   render() {
