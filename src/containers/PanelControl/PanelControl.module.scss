@@ -10,5 +10,14 @@
 // }
 
 .Toolbar {
-  border-bottom: 1px solid $font-color;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-between;
+  // border-bottom: 1px solid $font-color;
+  & > div {
+    display: flex;
+  flex-flow: row;
+  align-items: center;
+  }
 }

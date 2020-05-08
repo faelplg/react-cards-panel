@@ -3,6 +3,7 @@ import Panel from '../../components/Panel/Panel';
 import Filter from '../../components/Filter/Filter';
 import Card from '../../components/Card/Card';
 import Button from '../../components/Button/Button';
+import Tag from '../../components/Tag/Tag';
 
 import classes from './PanelControl.module.scss';
 import {IconContext} from 'react-icons';
@@ -63,6 +64,20 @@ class PanelControl extends PureComponent {
             </IconContext.Provider>
             <span>Filter</span>
           </Button>
+          <div>
+            <Tag>
+              <FaFilter />
+            </Tag>
+            <Tag>
+              <FaFilter />
+            </Tag>
+            <Tag>
+              <FaFilter />
+            </Tag>
+            <Tag>
+              <FaFilter />
+            </Tag>
+          </div>
         </div>
         <div className={classes.PanelControl}>
           <Filter open={this.state.filterOpen} runFilter={this.runFilterHandler} />
