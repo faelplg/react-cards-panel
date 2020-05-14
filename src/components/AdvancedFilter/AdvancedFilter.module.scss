@@ -1,7 +1,7 @@
 @import '../../sass/abstracts/mixins';
 @import '../../sass/abstracts/variables';
 
-.Filter {
+.AdvancedFilter {
   min-height: 1rem;
   flex: 0 1 auto;
   display: flex;
@@ -23,7 +23,7 @@
   }
 }
 
-.Filter.Open {
+.AdvancedFilter.Open {
   margin-top: 1.6rem;
   min-height: 7.2rem;
   background-color: $background-color-2;

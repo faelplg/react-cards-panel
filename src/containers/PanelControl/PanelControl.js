@@ -1,6 +1,7 @@
 import React, {PureComponent} from 'react';
 import Panel from '../../components/Panel/Panel';
 import Filter from '../../components/Filter/Filter';
+import AdvancedFilter from '../../components/AdvancedFilter/AdvancedFilter';
 import Card from '../../components/Card/Card';
 import Button from '../../components/Button/Button';
 import Tag from '../../components/Tag/Tag';
@@ -81,6 +82,7 @@ class PanelControl extends PureComponent {
         </div>
         <div className={classes.PanelControl}>
           <Filter open={this.state.filterOpen} runFilter={this.runFilterHandler} />
+          <AdvancedFilter open={this.state.filterOpen} runFilter={this.runFilterHandler} />
           <Panel shrink={this.state.panelShrink}>
             {this.state.cards.map((card) => (
               <Card key={card.id} name={card.name} contact={card.contact} />
