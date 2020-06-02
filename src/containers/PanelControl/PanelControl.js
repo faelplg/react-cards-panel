@@ -49,7 +49,7 @@ class PanelControl extends PureComponent {
   };
 
   runFilterHandler = (params) => {
-    console.log('DEBUG: on [PanelControl].runFilter() - params', params);
+    console.log('DEBUG: on [PanelControl].runFilter(...args) - params', params);
   };
 
   render() {
