@@ -2,7 +2,7 @@
 | :------------------ | --------------: | ---------:
 | react-cards-panel   |           0.1.0 | 01/06/2020
 
-Cards panel is an example view of a list using cards, simple and advanced filters, and responsivity strategies.
+The cards panel is an example of a list view implementing cards, simple and advanced filters, and responsivity strategies.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
