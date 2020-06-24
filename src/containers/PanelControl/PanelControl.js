@@ -56,7 +56,7 @@ class PanelControl extends PureComponent {
     return (
       <React.Fragment>
         <div className={classes.Header}>
-          <h1>Cards Panel</h1>
+          <h1>Cards List</h1>
         </div>
         <div className={classes.Toolbar}>
           <Button whenClicked={this.openFilterHandler} isActive={this.state.filterOpen}>
