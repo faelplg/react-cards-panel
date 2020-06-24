@@ -1,6 +1,6 @@
 | project             | release version | updated at
 | :------------------ | --------------: | ---------:
-| react-cards-panel   |           0.1.0 | 01/06/2020
+| react-cards-panel   |           0.1.0 | 23/06/2020
 
 The cards grid is an example of a list view. It implements cards, simple and advanced filters, and responsivity strategies.
 
