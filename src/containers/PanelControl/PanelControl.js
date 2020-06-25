@@ -1,14 +1,14 @@
 import React, {PureComponent} from 'react';
 import Panel from '../../components/Panel/Panel';
-import Filter from '../../components/Filter/Filter';
-import AdvancedFilter from '../../components/AdvancedFilter/AdvancedFilter';
+// import Filter from '../../components/Filter/Filter';
+// import AdvancedFilter from '../../components/AdvancedFilter/AdvancedFilter';
 import Card from '../../components/Card/Card';
-import Button from '../../components/Button/Button';
-import Tag from '../../components/Tag/Tag';
+// import Button from '../../components/Button/Button';
+// import Tag from '../../components/Tag/Tag';
 
 import classes from './PanelControl.module.scss';
-import {IconContext} from 'react-icons';
-import {FaFilter} from 'react-icons/fa';
+// import {IconContext} from 'react-icons';
+// import {FaFilter} from 'react-icons/fa';
 
 class PanelControl extends PureComponent {
   constructor(props) {
@@ -58,7 +58,7 @@ class PanelControl extends PureComponent {
         <div className={classes.Header}>
           <h1>Cards List</h1>
         </div>
-        <div className={classes.Toolbar}>
+        {/* <div className={classes.Toolbar}>
           <Button whenClicked={this.openFilterHandler} isActive={this.state.filterOpen}>
             <IconContext.Provider value={{style: {verticalAlign: 'middle', marginRight: '0.8rem'}}}>
               <FaFilter />
@@ -79,10 +79,10 @@ class PanelControl extends PureComponent {
               <FaFilter />
             </Tag>
           </div>
-        </div>
+        </div> */}
         <div className={classes.PanelControl}>
-          <Filter open={this.state.filterOpen} runFilter={this.runFilterHandler} />
-          <AdvancedFilter open={this.state.filterOpen} runFilter={this.runFilterHandler} />
+          {/* <Filter open={this.state.filterOpen} runFilter={this.runFilterHandler} /> */}
+          {/* <AdvancedFilter open={this.state.filterOpen} runFilter={this.runFilterHandler} /> */}
           <Panel shrink={this.state.panelShrink}>
             {this.state.cards.map((card) => (
               <Card key={card.id} name={card.name} contact={card.contact} />
