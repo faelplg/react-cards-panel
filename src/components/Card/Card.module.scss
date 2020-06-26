@@ -7,7 +7,6 @@
   height: 32rem;
   min-width: 20rem;
   padding: 0.8rem;
-  margin: 0.8rem;
 
   @include respond(phone) {
     flex: 1 1 auto;
@@ -16,5 +15,6 @@
     min-width: unset;
     width: auto;
     border: 1px solid $color-black;
+    margin: 0.4rem 0;
   }
 }

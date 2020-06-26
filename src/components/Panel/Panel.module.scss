@@ -4,7 +4,8 @@
   flex: 1 1 auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  padding: 0.8rem;
+  gap: 1.6rem;
+  padding: 0.8rem 1.6rem;
 
   @include respond(big-desktop) {
     grid-template-columns: repeat(5, 1fr);
@@ -18,16 +19,17 @@
   @include respond(phone) {
     display: flex;
     grid-template-columns: none;
+    gap: unset;
     flex-flow: column;
-    padding: unset;
+    padding: 0.4rem 0.8rem 0.8rem;
   }
 }
 
-.Panel.Shrink {
-  @include respond(tab-phone) {
-    display: flex;
-    grid-template-columns: none;
-    flex-flow: column;
-    padding: unset;
-  }
-}
+// .Panel.Shrink {
+//   @include respond(tab-phone) {
+//     display: flex;
+//     grid-template-columns: none;
+//     flex-flow: column;
+//     padding: unset;
+//   }
+// }
